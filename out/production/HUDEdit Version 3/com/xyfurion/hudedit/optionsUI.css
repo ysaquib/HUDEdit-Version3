@@ -1,0 +1,41 @@
+.radio-button > .radio {
+  -fx-background-insets: 0;
+  -fx-background-radius: 0;
+  -fx-background-color: transparent;
+}
+
+.radio-button{
+    -fx-opacity: 0.3;
+}
+
+.radio-button:selected{
+    -fx-opacity: 1;
+}
+
+.radio-button > .radio {
+  -fx-background-image: url("bin/icons/radio_button.png");
+  -fx-background-position: center;
+  -fx-background-repeat: stretch;
+  -fx-background-insets: 0;
+  -fx-border-color: transparent;
+  -fx-border-radius: 0;
+  -fx-shape: none;
+}
+
+.radio-button:selected > .radio{
+  -fx-background-insets: 0;
+  -fx-border-color: transparent;
+  -fx-border-radius: 0;
+  -fx-background-image: url("bin/icons/radio_button.png");
+}
+
+.radio-button:selected .dot{
+    -fx-mark-color: transparent;
+    -fx-mark-highlight-color: transparent;
+}
+
+.text-field{
+    -fx-text-fill: #ffffff;
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-radius: 0;
+}

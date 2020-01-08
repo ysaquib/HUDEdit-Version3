@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="400.0" style="-fx-background-color: #663399;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xyfurion.hudedit.resolutionController">
+   <children>
+      <Label layoutX="25.0" layoutY="25.0" prefHeight="30.0" prefWidth="350.0" text="Select Resolution" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="ratioDropdown" focusColor="#e056fd" layoutX="25.0" layoutY="75.0" onAction="#ratioBoxAction" prefHeight="25.0" prefWidth="160.0" promptText="Ratio" unFocusColor="WHITE">
+        <items>
+           <FXCollections fx:factory="observableArrayList">
+               <String fx:value="4:3" />
+               <String fx:value="5:3" />
+               <String fx:value="5:4" />
+               <String fx:value="16:9" />
+               <String fx:value="16:10" />
+               <String fx:value="21:9" />
+           </FXCollections>
+        </items>
+      </JFXComboBox>
+      <JFXComboBox fx:id="resolutionDropdown" disable="true" focusColor="#e056fd" layoutX="215.0" layoutY="75.0" onAction="#resolutionBoxAction" prefHeight="25.0" prefWidth="160.0" promptText="Resolution" unFocusColor="WHITE" />
+      <JFXButton fx:id="autoDetectButton" buttonType="RAISED" layoutX="25.0" layoutY="196.0" onMouseClicked="#autoDetectClicked" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #e056fd; -fx-background-radius: 1;" text="Auto Detect" textFill="WHITE" AnchorPane.bottomAnchor="25.0" />
+      <JFXButton fx:id="okayButton" buttonType="RAISED" disable="true" layoutX="273.0" layoutY="196.0" onMouseClicked="#okayClicked" prefHeight="30.0" prefWidth="102.0" style="-fx-background-radius: 1; -fx-background-color: #ffc618;" text="Okay" AnchorPane.bottomAnchor="25.0" />
+      <JFXCheckBox fx:id="useAsDefaultCheckbox" checkedColor="#e056fd" disable="true" layoutX="15.0" layoutY="118.0" prefHeight="17.0" prefWidth="219.0" text="Use this as default resolution" textFill="WHITE" unCheckedColor="WHITE" />
+   </children>
+</AnchorPane>
