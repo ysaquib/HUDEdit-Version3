@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.xyfurion.hudedit.HUDButton?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainFrame" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#paneMouseEntered" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #555555;" stylesheets="@mainUI.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xyfurion.hudedit.Controller">
+   <children>
+      <ImageView fx:id="backgroundImage" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+             <!-- BACKGROUND IMAGE -->
+            <Image url="@bin/images/image_background.jpg" />
+         </image>
+      </ImageView>
+      <HUDButton fx:id="btn_characterSelect" layoutX="107.0" layoutY="119.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="327.0" prefWidth="782.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="327.0" fitWidth="782.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_characterSelect.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_actionMenu" layoutX="228.0" layoutY="323.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="173.0" prefWidth="526.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="173.0" fitWidth="526.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_actionMenu.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_actionMenuSpec" layoutX="238.0" layoutY="333.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="173.0" prefWidth="526.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="173.0" fitWidth="526.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_actionMenu.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_abilityCooldown" layoutX="852.0" layoutY="431.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="185.0" prefWidth="220.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fx:id="image_abilityCooldown" fitHeight="185.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_ability.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic></HUDButton>
+      <HUDButton fx:id="btn_chatInput" layoutX="107.0" layoutY="119.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="20.0" prefWidth="400.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_chatInput.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_chatInputSpec" layoutX="117.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="20.0" prefWidth="400.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_chatInput.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_messageLog" layoutX="117.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_msgLog.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_messageLogSpec" layoutX="127.0" layoutY="139.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_msgLogSpec.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_obituaryLog" layoutX="137.0" layoutY="149.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_obituary.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_exeGameStatus" layoutX="137.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="120.0" prefWidth="1056.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="120.0" fitWidth="1056.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_exeGameStat.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_spectatorCard" layoutX="210.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="121.0" prefWidth="416.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="121.0" fitWidth="416.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_specCard.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_playerHealth" layoutX="760.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_health.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_weaponAmmo" layoutX="447.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="55.0" prefWidth="180.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_weaponAmmo.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_phantomShield" layoutX="87.0" layoutY="99.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="82.0" prefWidth="453.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="82.0" fitWidth="453.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_armor.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_badgeNotification" layoutX="97.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_badge.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_objective" layoutX="107.0" layoutY="562.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="36.0" prefWidth="272.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0; -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_objective.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_objectiveSpec" layoutX="47.0" layoutY="472.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="36.0" prefWidth="272.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_objectiveSpec.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_objectiveNotification" layoutX="127.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="70.0" prefWidth="700.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_objNtf.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_detected" layoutX="419.0" layoutY="624.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_detected.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_debilitated" layoutX="429.0" layoutY="634.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="30.0" prefWidth="228.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_debilitated.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_readyUp" layoutX="862.0" layoutY="441.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="105.0" prefWidth="218.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="105.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_readyUp.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_subtitles" layoutX="862.0" layoutY="441.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_subtitles.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_xpCounter" layoutX="862.0" layoutY="441.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="80.0" prefWidth="220.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_xp.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_gamewave" layoutX="50.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_gamewave.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_gamewaveSpec" layoutX="200.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="35.0" prefWidth="573.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="573.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_gamewaveSpec.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <HUDButton fx:id="btn_minimap" layoutX="248.0" layoutY="343.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseDragged="#assetDragged" onMouseEntered="#assetEntered" onMouseExited="#assetExited" onMousePressed="#assetPressed" prefHeight="165.0" prefWidth="240.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0;  -fx-padding: 0;">
+         <graphic>
+            <ImageView fitHeight="165.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bin/images/image_minimap.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </HUDButton>
+      <AnchorPane fx:id="menuBar" onMouseDragged="#menuBarDragged" onMouseEntered="#menuBarEntered" onMouseExited="#menuBarExited" onMousePressed="#menuBarMousePressed" prefHeight="36.0" prefWidth="1080.0" style="-fx-background-color: rgba(0,0,0,0);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar id="menu-bar" fx:id="menu" layoutY="1.0" prefHeight="35.0" prefWidth="260.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@mainUI.css">
+              <menus>
+                <Menu id="menu-button" fx:id="menu_file" mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem id="menu-item" fx:id="menuItem_open" mnemonicParsing="false" text="Open" disable="true" />
+                        <MenuItem id="menu-item" fx:id="menuItem_save" mnemonicParsing="false" text="Save" />
+                        <!--MenuItem id="menu-item" fx:id="menuItem_saveAs" mnemonicParsing="false" text="Save As" /-->
+                  </items>
+                </Menu>
+                <Menu id="menu-button" fx:id="menu_options" mnemonicParsing="false" text="Options">
+                  <items>
+                        <CheckMenuItem id="menu-item" fx:id="menuItem_showGrid" mnemonicParsing="false" text="Show Grid" disable="true"/>
+                  </items>
+                </Menu>
+                <Menu id="menu-button" fx:id="menu_moreAssets" mnemonicParsing="false" text="More Assets" disable="true"/>
+              </menus>
+            </MenuBar>
+            <JFXComboBox id="modeBox" fx:id="modeBox" focusColor="#e056fd" labelFloat="true" layoutX="751.0" layoutY="5.0" prefHeight="10.0" prefWidth="158.0" stylesheets="@mainUI.css" unFocusColor="WHITE" visibleRowCount="4" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="5.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="In Game" />
+                        <String fx:value="Warm Up" />
+                        <String fx:value="Spectator" />
+                        <String fx:value="All" />
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="In Game" />
+                </value>
+            </JFXComboBox>
+             <Label fx:id="modeLabel" layoutX="692.0" layoutY="6.0" prefHeight="25.0" prefWidth="58.0" text="Mode:" textFill="WHITE" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="6.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="rec_minimize" arcHeight="0.0" arcWidth="0.0" fill="#156f87" height="36.0" layoutX="1150.0" layoutY="1.0" onMouseClicked="#minimizeMouseClicked" onMouseEntered="#minimizeMouseEnter" onMouseExited="#minimizeMouseExit" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="1.0" />
+            <Rectangle fx:id="rec_screen" arcHeight="0.0" arcWidth="0.0" fill="#156f87" height="36.0" layoutX="1195.0" layoutY="1.0" onMouseClicked="#screenMouseClicked" onMouseEntered="#screenMouseEnter" onMouseExited="#screenMouseExit" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="0.0" />
+            <Rectangle fx:id="rec_close" arcHeight="0.0" arcWidth="0.0" fill="#cb171a" height="36.0" layoutX="1240.0" onMouseClicked="#closeMouseClicked" onMouseEntered="#closeMouseEnter" onMouseExited="#closeMouseExit" opacity="0.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <ImageView fx:id="icon_minimize" fitHeight="10.0" fitWidth="10.0" layoutX="965.0" layoutY="13.0" onMouseClicked="#minimizeMouseClicked" onMouseEntered="#minimizeMouseEnter" onMouseExited="#minimizeMouseExit" pickOnBounds="true" smooth="false" AnchorPane.rightAnchor="105.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@bin/icons/icon_minimize.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="icon_screen" fitHeight="10.0" fitWidth="10.0" layoutX="1010.0" layoutY="13.0" onMouseClicked="#screenMouseClicked" onMouseEntered="#screenMouseEnter" onMouseExited="#screenMouseExit" pickOnBounds="true" smooth="false" AnchorPane.rightAnchor="60.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@bin/icons/icon_fullscreen.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="icon_close" fitHeight="10.0" fitWidth="10.0" layoutX="1055.0" layoutY="13.0" onMouseClicked="#closeMouseClicked" onMouseEntered="#closeMouseEnter" onMouseExited="#closeMouseExit" pickOnBounds="true" smooth="false" AnchorPane.rightAnchor="15.0">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@bin/icons/icon_close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
